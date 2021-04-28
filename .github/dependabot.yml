@@ -1,0 +1,61 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/./demo-java"
+  schedule:
+    interval: weekly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.google.auto.value:auto-value-annotations
+    versions:
+    - 1.7.5
+    - "1.8"
+  - dependency-name: com.android.tools.build:gradle
+    versions:
+    - 4.1.2
+  commit-message:
+    prefix: chore(deps)
+- package-ecosystem: gradle
+  directory: "/./demo-java"
+  schedule:
+    interval: weekly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  target-branch: devsite
+  ignore:
+  - dependency-name: com.google.auto.value:auto-value-annotations
+    versions:
+    - 1.7.5
+    - "1.8"
+  - dependency-name: com.android.tools.build:gradle
+    versions:
+    - 4.1.2
+  commit-message:
+    prefix: chore(deps)
+- package-ecosystem: gradle
+  directory: "/./demo-kotlin"
+  schedule:
+    interval: weekly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.google.auto.value:auto-value-annotations
+    versions:
+    - 1.7.5
+    - "1.8"
+  - dependency-name: org.jetbrains.kotlin:kotlin-stdlib-jdk7
+    versions:
+    - 1.4.21-2
+    - 1.4.31
+    - 1.4.32
+  - dependency-name: org.jetbrains.kotlin:kotlin-gradle-plugin
+    versions:
+    - 1.4.21-2
+    - 1.4.31
+    - 1.4.32
+  - dependency-name: com.android.tools.build:gradle
+    versions:
+    - 4.1.2
+  commit-message:
+    prefix: chore(deps)
